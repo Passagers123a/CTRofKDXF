@@ -1,0 +1,6 @@
+
+yubase_stack.py    特征处理方式记为yu，lgb模型，特征保存为yu_pro_fea_baseline.csv，预测结果记为yu_stack.csv
+mybaseline_kdxf_stacking.py   特征处理方式记为mybaseline,模型使用lgb，得到的特征记为kdxf_pro_fea.csv，预测结果记为kdxf_baseline.csv
+myherpyopt_xgb.py  xgb参数寻优
+xgb_stack_lgb_df.py  特征处理方式mybaseline特征，融合yu_pro_fea_baseline,kdxf_pro_fea，这两者权值4:6，然后三种特征stack到xgb模型，得到的预测结果记为xgb_lgb_baseline.csv
+combine.py 最终两个模型的融合，xgb_lgb_baseline的xgb模型和kdxf_baseline的lgb模型融合
